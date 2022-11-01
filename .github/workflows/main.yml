@@ -46,5 +46,6 @@ jobs:
       - name: RunTwister
         run: |
           pip install tabulate
-          cd /home/runner/work/zephyr
-          scripts/twister -v --integration  -T ./
+          pip install ply
+          #         cd /home/runner/work/zephyr
+          /home/runner/work/zephyr/scripts/twister -v --integration  -T ./
