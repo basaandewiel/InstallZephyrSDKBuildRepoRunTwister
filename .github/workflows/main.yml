@@ -39,6 +39,11 @@ jobs:
           #next line gives error 'no module named 'cbor2''
 #          west build --pristine -b thingy91_nrf9160_ns
 
+# debug interactively via SSH
+      - name: Debugging with ssh
+        uses: lhotari/action-upterm@v1
+
       - name: RunTwister
         run: |
-          twister -v --integration  -T ./
+          cd /home/runner/work/zephyr
+          scripts/twister -v --integration  -T ./
