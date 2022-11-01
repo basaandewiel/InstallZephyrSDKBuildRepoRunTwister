@@ -26,7 +26,7 @@ jobs:
           cd /home/runner/work
           pip3 install -r zephyr/scripts/requirements-base.txt
           sudo apt install --no-install-recommends cmake ninja-build
-          source zephyr-env.sh
+          source ./zephyr/zephyr-env.sh
 
       - name: Checkout
         uses: actions/checkout@v3
