@@ -60,6 +60,10 @@ jobs:
           pip install cbor2
           west build --pristine -b thingy91_nrf9160_ns
 
+          # used for debugging via SSH
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+
       - name: RunTwister
         working-directory: repototest
         run: |
@@ -70,7 +74,4 @@ jobs:
           # in sample.yaml is indicated that integration tests will use native_posix
           /home/runner/work/zephyr/scripts/twister -v --integration  -T ./
 
-          # used for debugging via SSH
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
         
