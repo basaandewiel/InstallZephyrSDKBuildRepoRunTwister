@@ -41,6 +41,8 @@ jobs:
       - name: BuildTargets
         working-directory: repototest
         run: |
+          export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+          export ZEPHYR_SDK_INSTALL_DIR=/opt/toolchains/zephyr-sdk-0.15.1/
           west build --pristine -b qemu_x86
           #next line gives error 'no module named 'cbor2''
           pip install cbor2
