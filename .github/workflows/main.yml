@@ -41,13 +41,16 @@ jobs:
           #next line gives error 'no module named 'cbor2''
 #          west build --pristine -b thingy91_nrf9160_ns
 
-# debug interactively via SSH
-      - name: Debugging with ssh
-        uses: lhotari/action-upterm@v1
-
       - name: RunTwister
         working-directory: repototest
         run: |
           pip install tabulate
           pip install ply
+          #next line necessary to build for native_posix
+          sudo apt install gcc-multilib
           /home/runner/work/zephyr/scripts/twister -v --integration  -T ./
+
+# debug interactively via SSH
+      - name: Debugging with ssh
+        uses: lhotari/action-upterm@v1
+
