@@ -20,19 +20,20 @@ jobs:
         
           pip3 install west
           
-          #cd ${{github.workspace}}
-          #cd ..
-          #west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1 /home/runner/work
-          #cd /home/runner/work
-          #west update
-          #pip3 install -r zephyr/scripts/requirements-base.txt
-          #west init
-          
-          west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1
+          cd ${{github.workspace}}
+          cd ..
+          west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1 /home/runner/work
+          cd /home/runner/work
           west update
           pip3 install -r zephyr/scripts/requirements-base.txt
           
-          #sudo apt install --no-install-recommends cmake ninja-build
+          #west init
+          
+          #west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1
+          #west update
+          #pip3 install -r zephyr/scripts/requirements-base.txt
+          
+          #west build --pristine -b thingy91_nrf9160_nssudo apt install --no-install-recommends cmake ninja-build
           #source ./zephyr/zephyr-env.sh
           
           #install toolchains
