@@ -36,6 +36,7 @@ jobs:
 
       - name: BuildTargets
         run: |
+          cd /home/runner/work/repototest
           west build --pristine -b qemu_x86
           #next line gives error 'no module named 'cbor2''
 #          west build --pristine -b thingy91_nrf9160_ns
