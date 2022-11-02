@@ -1,4 +1,4 @@
-name: BuildViaZephyrAction
+name: InstallZephyrSDKBuildTwister
 
 on: 
   push:
