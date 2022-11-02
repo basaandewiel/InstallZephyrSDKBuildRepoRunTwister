@@ -1,4 +1,4 @@
-![Build qemu_x86](https://github.com/github/docs/actions/workflows/InstallZephyrSDKBuildTest.yml/badge.svg) 
+![Build qemu_x86](https://github.com/basaandewiel/InstallZephyrSDKBuildRepoRunTwister/actions/workflows/InstallZephyrSDKBuildTest.yml/badge.svg) 
 
 # Overview
 
