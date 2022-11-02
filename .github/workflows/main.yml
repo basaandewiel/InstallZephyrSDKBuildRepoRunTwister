@@ -10,22 +10,21 @@ jobs:
   installZephyrAndBuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        
       - name: InstallWestWorkspace
         run: |
-          #pip3 install west
+          pip3 install west
+          
           #cd ${{github.workspace}}
           #cd ..
-
           #west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1 /home/runner/work
           #cd /home/runner/work
           #west update
           #pip3 install -r zephyr/scripts/requirements-base.txt
           #west init
+          
           west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1
           west update
+          pip3 install -r zephyr/scripts/requirements-base.txt
           
           #sudo apt install --no-install-recommends cmake ninja-build
           #source ./zephyr/zephyr-env.sh
@@ -40,6 +39,9 @@ jobs:
           sudo wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.15.1/toolchain_linux-x86_64_x86_64-zephyr-elf.tar.gz
           sudo tar -xvf toolchain_linux-x86_64_x86_64-zephyr-elf.tar.gz
 
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        
       - name: Checkout
         uses: actions/checkout@v3
         with:
