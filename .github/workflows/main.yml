@@ -52,8 +52,8 @@ jobs:
       - name: RunTwister
         working-directory: repototest
         run: |
-          pip install tabulate
-          pip install ply
+          #pip install tabulate
+          #pip install ply
           #next line necessary to build for native_posix
           sudo apt install gcc-multilib
           /home/runner/work/zephyr/scripts/twister -v --integration  -T ./
