@@ -19,7 +19,7 @@ jobs:
       - name: requirementsforupterm
         run: |
           apt update
-          sudo apt install curl
+          sudo apt -y install curl
 
       #debug interactively via SSH
       - name: Debugging with ssh
