@@ -61,8 +61,8 @@ jobs:
           west build --pristine -b thingy91_nrf9160_ns
 
           # used for debugging via SSH
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
+      #- name: Setup upterm session
+      #  uses: lhotari/action-upterm@v1
 
       - name: RunTwister
         working-directory: repototest
