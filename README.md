@@ -1,3 +1,4 @@
+![Build qemu_x86](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 # Overview
 
 This repo is based on the standard Hello World sample. It is used to show how you can work with Github Actions to 
