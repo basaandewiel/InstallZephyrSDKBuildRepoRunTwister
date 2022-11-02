@@ -26,7 +26,8 @@ jobs:
           #cd /home/runner/work
           #west update
           #pip3 install -r zephyr/scripts/requirements-base.txt
-          west init
+          #west init
+          #west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.1.1
           west update
           
           #sudo apt install --no-install-recommends cmake ninja-build
