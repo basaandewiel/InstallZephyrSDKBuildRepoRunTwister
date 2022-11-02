@@ -18,6 +18,7 @@ jobs:
       
       - name: requirementsforupterm
         run: |
+          apt update
           sudo apt install curl
 
       #debug interactively via SSH
