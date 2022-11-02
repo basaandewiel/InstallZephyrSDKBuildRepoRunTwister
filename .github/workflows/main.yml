@@ -34,20 +34,20 @@ jobs:
           fetch-depth: 0
           path: repototest
 
-# debug interactively via SSH
-      - name: Debugging with ssh
-        uses: lhotari/action-upterm@v1
-
       - name: BuildTargets
+        working-directory: repototest
         run: |
-          #cd /home/runner/work/repototest
           west build --pristine -b qemu_x86
           #next line gives error 'no module named 'cbor2''
 #          west build --pristine -b thingy91_nrf9160_ns
 
+# debug interactively via SSH
+      - name: Debugging with ssh
+        uses: lhotari/action-upterm@v1
+
       - name: RunTwister
+        working-directory: repototest
         run: |
           pip install tabulate
           pip install ply
-          cd /home/runner/work/repototest
           /home/runner/work/zephyr/scripts/twister -v --integration  -T ./
